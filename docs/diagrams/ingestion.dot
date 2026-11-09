@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; fontname="Calibri"; nodesep=0.25; ranksep=0.32;
+ node [shape=box style="rounded,filled" fontname="Calibri" fontsize=10 fillcolor="#FFFFFF" color="#000000"]; edge [fontname="Calibri" fontsize=8 color="#000000"];
+ a [label="Acquire\nhash, source URL"]; b [label="Classify\nformat, regulator,\nversion, amends"]; c [label="Parse\nPDF, HTML, DOCX\nOCR when no text"]; d [label="Structure\narticle, paragraph,\ntable, footnote"]; e [label="Chunk\nparagraph first"]; f [label="Diff\nby paragraph"]; g [label="Human release\ngate" fillcolor="#D9D9D9"]; h [label="Embed + index\ncontextual prefix"]; i [label="Close old version\nset effective_to"]; j [label="Golden regression\nand impact report" fillcolor="#D9D9D9"];
+ a->b->c->d->e->f->g->h->j; g->i->j;
+}

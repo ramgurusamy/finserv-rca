@@ -1,0 +1,66 @@
+{
+  "changes": [
+    {
+      "doc_id": "rbi-kyc-2025",
+      "para_ref": "KYC-Para 61",
+      "old_version": "2026-10-01",
+      "new_version": "2027-01-01",
+      "numbers_removed": [],
+      "numbers_added": [],
+      "new_text": "SYNTHETIC DEMO TEXT. Enhanced due diligence on transactions with FATF-identified jurisdictions must be completed before the transaction is executed."
+    },
+    {
+      "doc_id": "rbi-kyc-2025",
+      "para_ref": "KYC-Para 50",
+      "old_version": "2026-10-01",
+      "new_version": "2027-01-01",
+      "numbers_removed": [
+        "5"
+      ],
+      "numbers_added": [
+        "8"
+      ],
+      "new_text": "SYNTHETIC DEMO TEXT. Transaction records must be kept for at least eight years from the date of the transaction."
+    }
+  ],
+  "directly_affected_policies": [
+    {
+      "id": "POL-AML-02",
+      "title": "Records retention schedule",
+      "owner": "Records Manager",
+      "transaction_types": [
+        "payment",
+        "loan",
+        "derivative",
+        "investment"
+      ],
+      "changed_paragraphs": [
+        "KYC-Para 50"
+      ]
+    },
+    {
+      "id": "POL-AML-03",
+      "title": "High-risk jurisdiction enhanced due diligence procedure",
+      "owner": "Head of Financial Crime Compliance",
+      "transaction_types": [
+        "payment",
+        "derivative"
+      ],
+      "changed_paragraphs": [
+        "KYC-Para 61"
+      ]
+    }
+  ],
+  "possibly_affected_policies": [],
+  "affected_screening_rules": [
+    "AML-002",
+    "AML-003",
+    "AML-004"
+  ],
+  "affected_transaction_types": [
+    "derivative",
+    "investment",
+    "loan",
+    "payment"
+  ]
+}

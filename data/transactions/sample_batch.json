@@ -1,0 +1,10 @@
+[
+  {"transaction_id": "TX-1001", "date": "2026-10-05", "description": "Cross-border payment of $2M to a non-KYC verified entity in a high-risk jurisdiction", "counterparty": "Entity A", "cross_border": true},
+  {"transaction_id": "TX-1002", "date": "2026-10-07", "description": "Intra-group derivative trade exceeding large exposure threshold", "counterparty": "FinServ Global EU Ltd"},
+  {"transaction_id": "TX-1003", "date": "2026-10-09", "description": "Retail customer investment in a complex product without appropriateness assessment", "amount": 25000, "currency": "EUR", "jurisdiction": "Germany", "counterparty_kyc_verified": true},
+  {"transaction_id": "TX-1004", "date": "2026-10-12", "description": "NBFC lending transaction requiring priority sector reporting", "amount": 1500000, "currency": "INR", "lender_type": "commercial bank", "psl_category": "agriculture", "borrower_amount_inr": 1500000},
+  {"transaction_id": "TX-1005", "date": "2026-10-14", "description": "Cross-border payment of $450,000 to a KYC-verified supplier in Iran", "counterparty": "Entity B"},
+  {"transaction_id": "TX-1006", "date": "2026-10-20", "description": "Cross-border payment of EUR 90,000 to a KYC-verified supplier in Germany", "counterparty": "Entity C", "jurisdiction": "Germany"},
+  {"transaction_id": "TX-1007", "date": "2026-10-22", "description": "Interbank derivative with exposure at 12% of Tier 1 capital", "amount": 8000000, "currency": "USD", "counterparty_kyc_verified": true, "jurisdiction": "Singapore"},
+  {"transaction_id": "TX-1008", "date": "2026-10-28", "description": "Please check this one"}
+]

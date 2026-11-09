@@ -1,0 +1,71 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{display:flex;flex-direction:column;justify-content:space-between;width:550px;height:600px;background:#fff;font-family:Carlito,Calibri,sans-serif;color:#000;padding:4px 6px}
+.bar{border:1.2px solid #000;border-radius:5px;padding:5px 8px;text-align:center;font-size:13px;background:#fff}
+.bar b{font-weight:700}
+.arrow{text-align:center;font-size:13px;line-height:13px;height:13px;color:#000}
+.plane{border:1px solid #9a9a9a;border-radius:6px;background:#f2f2f2;padding:4px 6px 6px}
+.plane h4{font-size:12px;font-weight:700;margin-bottom:4px}
+.plane h4 span{font-weight:400;color:#000}
+.row{display:flex;gap:5px;align-items:stretch}
+.row + .row{margin-top:4px}
+.box{flex:1;border:1px solid #000;border-radius:4px;background:#fff;padding:3px 4px;text-align:center;font-size:11.5px;line-height:1.2}
+.box b{display:block;font-size:12px}
+.box.key{background:#d9d9d9}
+.flow{display:flex;align-items:center;gap:3px}
+.flow .box{flex:1}
+.flow i{font-style:normal;font-size:12px}
+.mini{text-align:center;font-size:11px;line-height:11px;height:11px}
+</style></head><body>
+<div class="bar"><b>Users</b> &nbsp;Compliance Officer · Compliance Head · Internal Auditor</div>
+<div class="arrow">▼</div>
+<div class="bar"><b>API Gateway</b> &nbsp;SSO · role-based access · rate limits</div>
+<div class="arrow">▼</div>
+<div class="plane">
+ <h4>1. Application plane <span>(GKE, one per region)</span></h4>
+ <div class="row"><div class="box"><b>Input guardrails</b>PII redaction · injection screen</div></div>
+ <div class="mini">▼</div>
+ <div class="row">
+  <div class="box"><b>Agent</b>LangGraph, fixed path</div>
+  <div class="box"><b>RAG service</b>hybrid · re-rank · compress</div>
+  <div class="box"><b>Rule engine</b>versioned risk rules</div>
+ </div>
+ <div class="mini">▼</div>
+ <div class="flow">
+  <div class="box key"><b>LLM gateway</b>routing · residency · budget · fallback</div><i>→</i>
+  <div class="box"><b>Output guardrails</b>citations · numbers · schema</div>
+ </div>
+</div>
+<div class="arrow">▼</div>
+<div class="plane">
+ <h4>2. Model plane <span>(private GPU nodes, self-hosted)</span></h4>
+ <div class="row">
+  <div class="box"><b>Large model</b>answers (vLLM)</div>
+  <div class="box"><b>Small model</b>classify · extract</div>
+  <div class="box"><b>Embed + re-rank</b>BGE-M3</div>
+  <div class="box"><b>Fallback</b>quoted text, no LLM</div>
+ </div>
+</div>
+<div class="arrow">▼</div>
+<div class="plane">
+ <h4>3. Data plane <span>(region-pinned, customer-managed keys)</span></h4>
+ <div class="row">
+  <div class="box"><b>Qdrant</b>versioned paragraphs</div>
+  <div class="box"><b>AlloyDB</b>registry · assessments</div>
+  <div class="box"><b>Transaction API</b>read-only</div>
+  <div class="box"><b>Cloud Storage</b>documents · audit log</div>
+ </div>
+</div>
+<div class="arrow">▲ release</div>
+<div class="plane">
+ <h4>4. Ingestion <span>(batch)</span></h4>
+ <div class="flow">
+  <div class="box"><b>Regulator feeds</b>RBI · BIS · ESMA</div><i>→</i>
+  <div class="box"><b>Airflow</b>parse · chunk · embed</div><i>→</i>
+  <div class="box key"><b>Human gate</b>approve release</div><i>→</i>
+  <div class="box"><b>Impact analysis</b>policies · rules</div>
+ </div>
+</div>
+
+<div class="bar" style="font-size:12px"><b>Observability</b> &nbsp;OpenTelemetry · Prometheus · Grafana · Langfuse · drift alerts</div>
+</body></html>

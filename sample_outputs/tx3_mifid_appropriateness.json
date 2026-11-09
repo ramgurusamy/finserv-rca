@@ -1,0 +1,201 @@
+{
+  "assessment_id": "4736cc1ee5a746c581530f6c698554b7",
+  "status": "PRELIMINARY_NEEDS_INFO",
+  "risk_rating": "HIGH",
+  "summary": "Risk rating HIGH: Complex product sold to a retail client without appropriateness assessment.",
+  "transaction": {
+    "transaction_id": null,
+    "description": "Retail customer investment in a complex product without appropriateness assessment",
+    "amount": null,
+    "currency": null,
+    "instrument_type": "investment",
+    "counterparty": null,
+    "counterparty_kyc_verified": null,
+    "jurisdiction": null,
+    "jurisdiction_risk_stated": null,
+    "cross_border": null,
+    "intra_group": null,
+    "exposure_pct_tier1": null,
+    "exceeds_large_exposure_stated": null,
+    "client_category": "retail",
+    "complex_product": true,
+    "appropriateness_done": false,
+    "lender_type": null,
+    "nbfc_involved": null,
+    "psl_relevant": null,
+    "borrower_amount_inr": null,
+    "psl_category": null,
+    "date": null
+  },
+  "applicable_regulations": [
+    "Directive 2014/65/EU",
+    "ESMA35-43-2938 (3 January 2022)"
+  ],
+  "findings": [
+    {
+      "rule_id": "MIFID-001",
+      "title": "Complex product sold to a retail client without appropriateness assessment",
+      "framework": "MIFID_II",
+      "severity": "HIGH",
+      "rationale": "A complex product falls outside the execution-only exemption, so appropriateness must be assessed or a warning given.",
+      "required_actions": [
+        "Obtain the client's knowledge and experience and complete the assessment.",
+        "Warn the client if the product is inappropriate or information is insufficient.",
+        "Record the result, any warning, and whether the client asked to proceed."
+      ],
+      "citations": [
+        {
+          "label": "S1",
+          "doc_id": "mifid2-art25",
+          "para_ref": "Art25(3)",
+          "version": "2014-07-02",
+          "reference": "Directive 2014/65/EU, Article 25",
+          "source_url": "https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-25-assessment-suitability-and",
+          "content_class": "digest"
+        },
+        {
+          "label": "S2",
+          "doc_id": "mifid2-art25",
+          "para_ref": "Art25(4)",
+          "version": "2014-07-02",
+          "reference": "Directive 2014/65/EU, Article 25",
+          "source_url": "https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-25-assessment-suitability-and",
+          "content_class": "digest"
+        },
+        {
+          "label": "S3",
+          "doc_id": "esma-appropriateness",
+          "para_ref": "ESMA-P17",
+          "version": "2022-01-03",
+          "reference": "ESMA35-43-2938 (3 January 2022); ESMA35-36-1640 (4 April 2019)",
+          "source_url": "https://www.esma.europa.eu/sites/default/files/library/esma35-43-2938_gls_appropriateness_ex-only.pdf",
+          "content_class": "digest"
+        },
+        {
+          "label": "S4",
+          "doc_id": "esma-appropriateness",
+          "para_ref": "ESMA-G11",
+          "version": "2022-01-03",
+          "reference": "ESMA35-43-2938 (3 January 2022); ESMA35-36-1640 (4 April 2019)",
+          "source_url": "https://www.esma.europa.eu/sites/default/files/library/esma35-43-2938_gls_appropriateness_ex-only.pdf",
+          "content_class": "digest"
+        }
+      ],
+      "evidence_found": true
+    }
+  ],
+  "required_actions": [
+    "Obtain the client's knowledge and experience and complete the assessment.",
+    "Warn the client if the product is inappropriate or information is insufficient.",
+    "Record the result, any warning, and whether the client asked to proceed."
+  ],
+  "citations": [
+    {
+      "label": "S1",
+      "doc_id": "mifid2-art25",
+      "para_ref": "Art25(3)",
+      "version": "2014-07-02",
+      "reference": "Directive 2014/65/EU, Article 25",
+      "source_url": "https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-25-assessment-suitability-and",
+      "content_class": "digest"
+    },
+    {
+      "label": "S2",
+      "doc_id": "mifid2-art25",
+      "para_ref": "Art25(4)",
+      "version": "2014-07-02",
+      "reference": "Directive 2014/65/EU, Article 25",
+      "source_url": "https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-25-assessment-suitability-and",
+      "content_class": "digest"
+    },
+    {
+      "label": "S3",
+      "doc_id": "esma-appropriateness",
+      "para_ref": "ESMA-P17",
+      "version": "2022-01-03",
+      "reference": "ESMA35-43-2938 (3 January 2022); ESMA35-36-1640 (4 April 2019)",
+      "source_url": "https://www.esma.europa.eu/sites/default/files/library/esma35-43-2938_gls_appropriateness_ex-only.pdf",
+      "content_class": "digest"
+    },
+    {
+      "label": "S4",
+      "doc_id": "esma-appropriateness",
+      "para_ref": "ESMA-G11",
+      "version": "2022-01-03",
+      "reference": "ESMA35-43-2938 (3 January 2022); ESMA35-36-1640 (4 April 2019)",
+      "source_url": "https://www.esma.europa.eu/sites/default/files/library/esma35-43-2938_gls_appropriateness_ex-only.pdf",
+      "content_class": "digest"
+    }
+  ],
+  "clarifying_questions": [
+    "What is the transaction amount and currency?"
+  ],
+  "cross_regulation_notes": [],
+  "errors": [],
+  "human_review_required": true,
+  "disclaimer": "Decision support for a compliance officer. Not a legal determination.",
+  "trace": [
+    {
+      "node": "intake",
+      "t": 1793871530.604,
+      "pii_redactions": {},
+      "parsed": [
+        "appropriateness_done",
+        "client_category",
+        "complex_product",
+        "instrument_type"
+      ]
+    },
+    {
+      "node": "pull_transaction",
+      "t": 1793871530.605,
+      "skipped": true
+    },
+    {
+      "node": "check_sufficiency",
+      "t": 1793871530.606,
+      "open_questions": 1
+    },
+    {
+      "node": "screen",
+      "t": 1793871530.607,
+      "triggered": [
+        "MIFID-001"
+      ]
+    },
+    {
+      "node": "retrieve",
+      "t": 1793871530.624,
+      "broadened": false,
+      "evidence": {
+        "MIFID-001": [
+          "Art25(3)",
+          "Art25(4)",
+          "ESMA-P17",
+          "ESMA-G11",
+          "ESMA-B19"
+        ]
+      }
+    },
+    {
+      "node": "cross_reference",
+      "t": 1793871530.626,
+      "notes": 0
+    },
+    {
+      "node": "assess",
+      "t": 1793871530.627,
+      "rating": "HIGH"
+    },
+    {
+      "node": "validate",
+      "t": 1793871530.63,
+      "status": "PRELIMINARY_NEEDS_INFO",
+      "uncited": []
+    },
+    {
+      "node": "finalize",
+      "t": 1793871530.631
+    }
+  ]
+}

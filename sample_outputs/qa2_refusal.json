@@ -1,0 +1,25 @@
+{
+  "question": "What does the Dodd-Frank Volcker Rule say about proprietary trading?",
+  "answer": "The indexed regulations do not contain enough evidence to answer this question.",
+  "citations": [],
+  "grounded": false,
+  "refused": true,
+  "degraded": false,
+  "provider": "",
+  "model": "",
+  "prompt_version": "qa-v1",
+  "as_of": null,
+  "guardrails": {
+    "passed": true,
+    "invalid_citations": [],
+    "uncited_sentences": [],
+    "unsupported_numbers": [],
+    "pii_redactions": {},
+    "notes": [
+      "abstained: evidence strength below 0.23"
+    ]
+  },
+  "latency_ms": 19,
+  "tokens": {},
+  "audit_id": "4fa18f77d62e4c67a778e64ca84b792a"
+}

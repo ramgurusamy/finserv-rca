@@ -1,0 +1,224 @@
+# Deterministic screening rules. Thresholds and citations live here, not in code,
+# so compliance can change them through review and no model decides a rating.
+# `anchors` are the paragraphs a finding must be able to cite.
+version: "rules-v1"
+lists:
+  call_for_action: ["north korea", "dprk", "democratic people's republic of korea", "iran", "myanmar"]
+  increased_monitoring: ["angola", "bolivia", "bosnia and herzegovina", "bulgaria", "cameroon", "cote d'ivoire", "democratic republic of the congo", "haiti", "iraq", "kenya", "kuwait", "laos", "lao people's democratic republic", "lebanon", "monaco", "nepal", "papua new guinea", "south sudan", "syria", "venezuela", "vietnam", "virgin islands", "yemen"]
+rules:
+  - id: AML-001
+    title: Transaction with a counterparty lacking verified KYC
+    framework: RBI
+    severity: CRITICAL
+    when: [{field: counterparty_kyc_verified, op: eq, value: false}]
+    query: no transaction without customer due diligence when CDD cannot be applied suspicious transaction report
+    frameworks: [RBI]
+    anchors: ["KYC-Para 17(3)", "KYC-Para 17(2)", "KYC-Para 5(2)(v)"]
+    rationale: The counterparty has not completed KYC, and customer due diligence applies to international money transfers.
+    actions:
+      - Hold the transaction until customer due diligence is complete.
+      - Identify and verify the beneficial owner of the counterparty.
+      - Ask the Principal Officer to consider a Suspicious Transaction Report.
+  - id: AML-002
+    title: Transaction with a FATF call-for-action jurisdiction
+    framework: RBI
+    severity: CRITICAL
+    when: [{field: jurisdiction, op: in_list, value: call_for_action}]
+    query: FATF high-risk jurisdictions enhanced due diligence call for action
+    frameworks: [RBI]
+    anchors: ["KYC-Para 61", "FATF-CFA"]
+    rationale: The named jurisdiction is on the FATF call-for-action list.
+    actions:
+      - Apply risk-proportionate enhanced due diligence.
+      - Examine and record the background and purpose of the transaction.
+      - Screen parties against the UNSC and UAPA lists.
+  - id: AML-003
+    title: Transaction with a FATF increased-monitoring jurisdiction
+    framework: RBI
+    severity: HIGH
+    when: [{field: jurisdiction, op: in_list, value: increased_monitoring}]
+    query: jurisdictions under increased monitoring FATF enhanced due diligence
+    frameworks: [RBI]
+    anchors: ["KYC-Para 61", "FATF-IM"]
+    rationale: The named jurisdiction is on the FATF increased-monitoring list.
+    actions:
+      - Apply risk-proportionate enhanced due diligence.
+      - Examine and record the background and purpose of the transaction.
+  - id: AML-004
+    title: High-risk jurisdiction stated but not named
+    framework: RBI
+    severity: HIGH
+    when:
+      - {field: jurisdiction_risk_stated, op: eq, value: true}
+      - {field: jurisdiction, op: is_none}
+    query: FATF high-risk jurisdictions enhanced due diligence
+    frameworks: [RBI]
+    anchors: ["KYC-Para 61", "KYC-Para 20"]
+    rationale: The description says high-risk, but the list status cannot be confirmed until the jurisdiction is named.
+    actions:
+      - Treat as high risk and apply enhanced due diligence until the jurisdiction is confirmed.
+    missing: [jurisdiction]
+  - id: AML-005
+    title: Cross-border payment information
+    framework: RBI
+    severity: MEDIUM
+    when:
+      - {field: cross_border, op: eq, value: true}
+      - {field: instrument_type, op: eq, value: payment}
+    query: cross-border wire transfer originator and beneficiary information
+    frameworks: [RBI]
+    anchors: ["KYC-WIRE-Para 74(1)(i)"]
+    rationale: Cross-border transfers must carry complete originator and beneficiary information.
+    actions:
+      - Confirm that complete originator and beneficiary information accompanies the transfer.
+      - Retain transaction records for at least five years.
+  - id: LEX-001
+    title: Exposure above the Basel large exposure limit
+    framework: BASEL_III
+    severity: CRITICAL
+    when: [{field: exposure_pct_tier1, op: gt, value: 25}]
+    query: large exposure limit 25% Tier 1 capital breach reported to supervisor
+    frameworks: [BASEL_III]
+    anchors: ["LEX20.1", "LEX20.3"]
+    rationale: The stated exposure exceeds 25% of Tier 1 capital.
+    actions:
+      - Report the breach to the supervisor immediately.
+      - Bring the exposure back within the limit quickly.
+  - id: LEX-002
+    title: Reportable large exposure
+    framework: BASEL_III
+    severity: MEDIUM
+    when:
+      - {field: exposure_pct_tier1, op: gte, value: 10}
+      - {field: exposure_pct_tier1, op: lte, value: 25}
+    query: large exposure definition 10% Tier 1 capital regulatory reporting
+    frameworks: [BASEL_III]
+    anchors: ["LEX10.8", "LEX20.4"]
+    rationale: The stated exposure is at or above the 10% large exposure definition.
+    actions:
+      - Include the exposure in large exposure reporting, before and after credit risk mitigation.
+  - id: LEX-003
+    title: Large exposure threshold stated without a measured value
+    framework: BASEL_III
+    severity: HIGH
+    when:
+      - {field: exceeds_large_exposure_stated, op: eq, value: true}
+      - {field: exposure_pct_tier1, op: is_none}
+    query: large exposure limit Tier 1 capital reporting threshold
+    frameworks: [BASEL_III]
+    anchors: ["LEX20.1", "LEX10.8"]
+    rationale: The description says the threshold is exceeded, but limit breach cannot be confirmed without exposure as a percentage of Tier 1 capital.
+    actions:
+      - Calculate total exposure to the counterparty group as a percentage of Tier 1 capital.
+    missing: [exposure_pct_tier1]
+  - id: LEX-004
+    title: Intra-group exposure treatment
+    framework: RBI
+    severity: MEDIUM
+    when: [{field: intra_group, op: eq, value: true}]
+    query: intra-group exposure limits eligible capital base proprietary derivative
+    frameworks: [RBI, BASEL_III]
+    anchors: ["LEX-NOTE", "LEX10.4", "CR-AMD-Para 116", "CR-AMD-Foreign-branches"]
+    rationale: Basel sets no separate intragroup treatment, so the national rule applies at each tier of the group.
+    actions:
+      - Confirm which national intra-group limit applies to the booking entity.
+      - Test the exposure against the eligible capital base.
+    missing: [lender_type]
+  - id: LEX-005
+    title: Derivative exposure measurement
+    framework: BASEL_III
+    severity: LOW
+    when:
+      - {field: instrument_type, op: eq, value: derivative}
+      - {field: exceeds_large_exposure_stated, op: eq, value: true}
+    query: derivative exposure value SA-CCR large exposures
+    frameworks: [BASEL_III]
+    anchors: ["LEX30.4"]
+    rationale: Derivative exposure value for large exposures uses SA-CCR.
+    actions:
+      - Measure the derivative exposure value using SA-CCR.
+  - id: MIFID-001
+    title: Complex product sold to a retail client without appropriateness assessment
+    framework: MIFID_II
+    severity: HIGH
+    when:
+      - {field: client_category, op: eq, value: retail}
+      - {field: complex_product, op: eq, value: true}
+      - {field: appropriateness_done, op: eq, value: false}
+    query: appropriateness assessment warning complex instruments execution-only retail client
+    frameworks: [MIFID_II]
+    anchors: ["Art25(3)", "Art25(4)", "ESMA-P17", "ESMA-G11"]
+    rationale: A complex product falls outside the execution-only exemption, so appropriateness must be assessed or a warning given.
+    actions:
+      - Obtain the client's knowledge and experience and complete the assessment.
+      - Warn the client if the product is inappropriate or information is insufficient.
+      - Record the result, any warning, and whether the client asked to proceed.
+  - id: MIFID-002
+    title: Appropriateness status unknown for a complex retail product
+    framework: MIFID_II
+    severity: MEDIUM
+    when:
+      - {field: client_category, op: eq, value: retail}
+      - {field: complex_product, op: eq, value: true}
+      - {field: appropriateness_done, op: is_none}
+    query: appropriateness assessment complex instruments retail client
+    frameworks: [MIFID_II]
+    anchors: ["Art25(3)"]
+    rationale: The record does not show whether an appropriateness assessment took place.
+    actions:
+      - Confirm that an appropriateness assessment is on record.
+    missing: [appropriateness_done]
+  - id: PSL-001
+    title: On-lending through an NBFC with priority sector treatment
+    framework: RBI
+    severity: MEDIUM
+    when:
+      - {field: nbfc_involved, op: eq, value: true}
+      - {field: psl_relevant, op: eq, value: true}
+    query: on-lending through NBFC priority sector eligibility cap reporting
+    frameworks: [RBI]
+    anchors: ["PSL-Para 2", "PSL-Para 23", "PSL-Para 25", "PSL-Para 28"]
+    rationale: NBFCs have no priority sector targets of their own, so the obligation sits with the lending bank through the on-lending route.
+    actions:
+      - Confirm per-borrower eligibility and obtain disaggregated data with auditor certification.
+      - Check the 5% on-lending cap.
+      - Include the loan in quarterly priority sector reporting within 15 days after quarter end.
+    missing: [lender_type, psl_category, borrower_amount_inr]
+  - id: PSL-002
+    title: Agriculture on-lending above the per-borrower ceiling
+    framework: RBI
+    severity: HIGH
+    when:
+      - {field: nbfc_involved, op: eq, value: true}
+      - {field: psl_category, op: eq, value: agriculture}
+      - {field: borrower_amount_inr, op: gt, value: 1000000}
+    query: on-lending NBFC agriculture Rs 10 lakh per borrower
+    frameworks: [RBI]
+    anchors: ["PSL-Para 23"]
+    rationale: The loan exceeds the Rs 10 lakh per-borrower ceiling for agriculture on-lending.
+    actions:
+      - Do not classify this loan as priority sector through the NBFC on-lending route.
+  - id: PSL-003
+    title: MSE on-lending above the per-borrower ceiling
+    framework: RBI
+    severity: HIGH
+    when:
+      - {field: nbfc_involved, op: eq, value: true}
+      - {field: psl_category, op: eq, value: mse}
+      - {field: borrower_amount_inr, op: gt, value: 2000000}
+    query: on-lending NBFC micro small enterprises Rs 20 lakh per borrower
+    frameworks: [RBI]
+    anchors: ["PSL-Para 23"]
+    rationale: The loan exceeds the Rs 20 lakh per-borrower ceiling for micro and small enterprise on-lending.
+    actions:
+      - Do not classify this loan as priority sector through the NBFC on-lending route.
+questions:
+  amount: What is the transaction amount and currency?
+  counterparty_kyc_verified: Has the counterparty completed KYC verification?
+  jurisdiction: Which country or jurisdiction is the counterparty in?
+  exposure_pct_tier1: What is the total exposure to this counterparty group as a percentage of Tier 1 capital?
+  appropriateness_done: Is an appropriateness assessment on record for this client and product?
+  lender_type: Which legal entity and lender type is booking this, for example a commercial bank or an NBFC?
+  psl_category: Which priority sector category applies, for example agriculture or MSE?
+  borrower_amount_inr: What is the per-borrower amount in INR?
+  instrument_type: What is the instrument type, for example payment, derivative or loan?

@@ -1,0 +1,49 @@
+{
+  "period": {
+    "start": "2026-10-01",
+    "end": "2026-10-31"
+  },
+  "transactions_screened": 8,
+  "by_rating": {
+    "CRITICAL": 2,
+    "HIGH": 3,
+    "MEDIUM": 2,
+    "UNDETERMINED": 1
+  },
+  "by_status": {
+    "PRELIMINARY_NEEDS_INFO": 2,
+    "COMPLETE": 5,
+    "INSUFFICIENT_INFO": 1
+  },
+  "by_framework": {
+    "RBI": 9,
+    "BASEL_III": 3,
+    "MIFID_II": 1
+  },
+  "top_findings": [
+    [
+      "AML-005: Cross-border payment information",
+      3
+    ],
+    [
+      "AML-001: Transaction with a counterparty lacking verified KYC",
+      1
+    ],
+    [
+      "AML-004: High-risk jurisdiction stated but not named",
+      1
+    ],
+    [
+      "LEX-003: Large exposure threshold stated without a measured value",
+      1
+    ],
+    [
+      "LEX-004: Intra-group exposure treatment",
+      1
+    ]
+  ],
+  "audit_chain": {
+    "intact": true,
+    "records": 37
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "assessment_id": "5b8e245fc91342d09f50de1636f45721",
+  "status": "COMPLETE",
+  "risk_rating": "CRITICAL",
+  "summary": "Risk rating CRITICAL: Transaction with a counterparty lacking verified KYC; Transaction with a FATF call-for-action jurisdiction; Cross-border payment information.",
+  "transaction": {
+    "transaction_id": null,
+    "description": "Cross-border payment of $2M to a non-KYC verified entity in a high-risk jurisdiction",
+    "amount": 2000000.0,
+    "currency": "USD",
+    "instrument_type": "payment",
+    "counterparty": null,
+    "counterparty_kyc_verified": false,
+    "jurisdiction": "Myanmar",
+    "jurisdiction_risk_stated": true,
+    "cross_border": true,
+    "intra_group": null,
+    "exposure_pct_tier1": null,
+    "exceeds_large_exposure_stated": null,
+    "client_category": null,
+    "complex_product": null,
+    "appropriateness_done": null,
+    "lender_type": null,
+    "nbfc_involved": null,
+    "psl_relevant": null,
+    "borrower_amount_inr": null,
+    "psl_category": null,
+    "date": null
+  },
+  "applicable_regulations": [
+    "RBI Press Release 2026-2027/685",
+    "RBI/DOR/2025-26/169",
+    "RBI/DOR/2025-26/218"
+  ],
+  "findings": [
+    {
+      "rule_id": "AML-001",
+      "title": "Transaction with a counterparty lacking verified KYC",
+      "framework": "RBI",
+      "severity": "CRITICAL",
+      "rationale": "The counterparty has not completed KYC, and customer due diligence applies to international money transfers.",
+      "required_actions": [
+        "Hold the transaction until customer due diligence is complete.",
+        "Identify and verify the beneficial owner of the counterparty.",
+        "Ask the Principal Officer to consider a Suspicious Transaction Report."
+      ],
+      "citations": [
+        {
+          "label": "S1",
+          "doc_id": "rbi-kyc-2025",
+          "para_ref": "KYC-Para 17(3)",
+          "version": "2026-10-01",
+          "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+          "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+          "content_class": "digest"
+        },
+        {
+          "label": "S2",
+          "doc_id": "rbi-kyc-2025",
+          "para_ref": "KYC-Para 17(2)",
+          "version": "2026-10-01",
+          "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+          "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+          "content_class": "digest"
+        },
+        {
+          "label": "S3",
+          "doc_id": "rbi-kyc-2025",
+          "para_ref": "KYC-Para 5(2)(v)",
+          "version": "2026-10-01",
+          "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+          "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+          "content_class": "digest"
+        },
+        {
+          "label": "S4",
+          "doc_id": "rbi-kyc-2025",
+          "para_ref": "KYC-Para 61",
+          "version": "2026-10-01",
+          "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+          "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+          "content_class": "digest"
+        }
+      ],
+      "evidence_found": true
+    },
+    {
+      "rule_id": "AML-002",
+      "title": "Transaction with a FATF call-for-action jurisdiction",
+      "framework": "RBI",
+      "severity": "CRITICAL",
+      "rationale": "The named jurisdiction is on the FATF call-for-action list.",
+      "required_actions": [
+        "Apply risk-proportionate enhanced due diligence.",
+        "Examine and record the background and purpose of the transaction.",
+        "Screen parties against the UNSC and UAPA lists."
+      ],
+      "citations": [
+        {
+          "label": "S1",
+          "doc_id": "rbi-kyc-2025",
+          "para_ref": "KYC-Para 61",
+          "version": "2026-10-01",
+          "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+          "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+          "content_class": "digest"
+        },
+        {
+          "label": "S2",
+          "doc_id": "rbi-fatf-2026",
+          "para_ref": "FATF-CFA",
+          "version": "2026-07-16",
+          "reference": "RBI Press Release 2026-2027/685, 16 July 2026",
+          "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63163",
+          "content_class": "digest"
+        },
+        {
+          "label": "S3",
+          "doc_id": "rbi-kyc-2025",
+          "para_ref": "KYC-Para 5(2)(v)",
+          "version": "2026-10-01",
+          "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+          "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+          "content_class": "digest"
+        },
+        {
+          "label": "S4",
+          "doc_id": "rbi-kyc-2025",
+          "para_ref": "KYC-Para 20",
+          "version": "2026-10-01",
+          "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+          "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+          "content_class": "digest"
+        }
+      ],
+      "evidence_found": true
+    },
+    {
+      "rule_id": "AML-005",
+      "title": "Cross-border payment information",
+      "framework": "RBI",
+      "severity": "MEDIUM",
+      "rationale": "Cross-border transfers must carry complete originator and beneficiary information.",
+      "required_actions": [
+        "Confirm that complete originator and beneficiary information accompanies the transfer.",
+        "Retain transaction records for at least five years."
+      ],
+      "citations": [
+        {
+          "label": "S1",
+          "doc_id": "rbi-kyc-wire",
+          "para_ref": "KYC-WIRE-Para 74(1)(i)",
+          "version": "2026-10-01",
+          "reference": "RBI/DOR/2025-26/218; DOR.AML.REC.No.137/14.01.009/2025-26, 28 November 2025, updated as on 1 October 2026",
+          "source_url": "https://www.caalley.com/rbi_mc_md_25/md/218MD.pdf",
+          "content_class": "digest"
+        }
+      ],
+      "evidence_found": true
+    }
+  ],
+  "required_actions": [
+    "Hold the transaction until customer due diligence is complete.",
+    "Identify and verify the beneficial owner of the counterparty.",
+    "Ask the Principal Officer to consider a Suspicious Transaction Report.",
+    "Apply risk-proportionate enhanced due diligence.",
+    "Examine and record the background and purpose of the transaction.",
+    "Screen parties against the UNSC and UAPA lists.",
+    "Confirm that complete originator and beneficiary information accompanies the transfer.",
+    "Retain transaction records for at least five years."
+  ],
+  "citations": [
+    {
+      "label": "S1",
+      "doc_id": "rbi-kyc-2025",
+      "para_ref": "KYC-Para 17(3)",
+      "version": "2026-10-01",
+      "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+      "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+      "content_class": "digest"
+    },
+    {
+      "label": "S2",
+      "doc_id": "rbi-kyc-2025",
+      "para_ref": "KYC-Para 17(2)",
+      "version": "2026-10-01",
+      "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+      "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+      "content_class": "digest"
+    },
+    {
+      "label": "S3",
+      "doc_id": "rbi-kyc-2025",
+      "para_ref": "KYC-Para 5(2)(v)",
+      "version": "2026-10-01",
+      "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+      "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+      "content_class": "digest"
+    },
+    {
+      "label": "S4",
+      "doc_id": "rbi-kyc-2025",
+      "para_ref": "KYC-Para 61",
+      "version": "2026-10-01",
+      "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+      "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+      "content_class": "digest"
+    },
+    {
+      "label": "S2",
+      "doc_id": "rbi-fatf-2026",
+      "para_ref": "FATF-CFA",
+      "version": "2026-07-16",
+      "reference": "RBI Press Release 2026-2027/685, 16 July 2026",
+      "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63163",
+      "content_class": "digest"
+    },
+    {
+      "label": "S4",
+      "doc_id": "rbi-kyc-2025",
+      "para_ref": "KYC-Para 20",
+      "version": "2026-10-01",
+      "reference": "RBI/DOR/2025-26/169; DOR.AML.REC.No.88/14.01.002/2025-26, 28 November 2025, updated as on 1 October 2026",
+      "source_url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13141",
+      "content_class": "digest"
+    },
+    {
+      "label": "S1",
+      "doc_id": "rbi-kyc-wire",
+      "para_ref": "KYC-WIRE-Para 74(1)(i)",
+      "version": "2026-10-01",
+      "reference": "RBI/DOR/2025-26/218; DOR.AML.REC.No.137/14.01.009/2025-26, 28 November 2025, updated as on 1 October 2026",
+      "source_url": "https://www.caalley.com/rbi_mc_md_25/md/218MD.pdf",
+      "content_class": "digest"
+    }
+  ],
+  "clarifying_questions": [],
+  "cross_regulation_notes": [
+    "Missing KYC and a call-for-action jurisdiction compound each other."
+  ],
+  "errors": [],
+  "human_review_required": true,
+  "disclaimer": "Decision support for a compliance officer. Not a legal determination.",
+  "trace": [
+    {
+      "node": "intake",
+      "t": 1793871530.683,
+      "pii_redactions": {},
+      "parsed": [
+        "amount",
+        "counterparty_kyc_verified",
+        "cross_border",
+        "currency",
+        "instrument_type",
+        "jurisdiction",
+        "jurisdiction_risk_stated"
+      ]
+    },
+    {
+      "node": "pull_transaction",
+      "t": 1793871530.683,
+      "skipped": true
+    },
+    {
+      "node": "check_sufficiency",
+      "t": 1793871530.685,
+      "open_questions": 0
+    },
+    {
+      "node": "screen",
+      "t": 1793871530.687,
+      "triggered": [
+        "AML-001",
+        "AML-002",
+        "AML-005"
+      ]
+    },
+    {
+      "node": "retrieve",
+      "t": 1793871530.748,
+      "broadened": false,
+      "evidence": {
+        "AML-001": [
+          "KYC-Para 17(3)",
+          "KYC-Para 17(2)",
+          "KYC-Para 5(2)(v)",
+          "KYC-Para 61"
+        ],
+        "AML-002": [
+          "KYC-Para 61",
+          "FATF-CFA",
+          "KYC-Para 5(2)(v)",
+          "KYC-Para 20"
+        ],
+        "AML-005": [
+          "KYC-WIRE-Para 74(1)(i)"
+        ]
+      }
+    },
+    {
+      "node": "cross_reference",
+      "t": 1793871530.75,
+      "notes": 1
+    },
+    {
+      "node": "assess",
+      "t": 1793871530.751,
+      "rating": "CRITICAL"
+    },
+    {
+      "node": "validate",
+      "t": 1793871530.755,
+      "status": "COMPLETE",
+      "uncited": []
+    },
+    {
+      "node": "finalize",
+      "t": 1793871530.755
+    }
+  ]
+}

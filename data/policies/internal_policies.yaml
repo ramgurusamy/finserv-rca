@@ -1,0 +1,38 @@
+# SYNTHETIC internal policy register for the regulatory-change demo.
+policies:
+  - id: POL-AML-01
+    title: Customer due diligence and onboarding standard
+    owner: Head of Financial Crime Compliance
+    depends_on: ["KYC-Para 17(2)", "KYC-Para 17(3)", "KYC-Para 5(1)(iv)"]
+    transaction_types: [payment, loan]
+    description: Customer identification, beneficial ownership and onboarding refusal procedure.
+  - id: POL-AML-02
+    title: Records retention schedule
+    owner: Records Manager
+    depends_on: ["KYC-Para 50"]
+    transaction_types: [payment, loan, derivative, investment]
+    description: Retention periods for transaction records and identification records.
+  - id: POL-AML-03
+    title: High-risk jurisdiction enhanced due diligence procedure
+    owner: Head of Financial Crime Compliance
+    depends_on: ["KYC-Para 61", "FATF-CFA", "FATF-IM"]
+    transaction_types: [payment, derivative]
+    description: Enhanced due diligence for FATF-identified jurisdictions before transactions are executed.
+  - id: POL-TRS-01
+    title: Large exposure limit monitoring
+    owner: Treasury Risk
+    depends_on: ["LEX20.1", "LEX10.8", "NBFC-CR-Para 33"]
+    transaction_types: [derivative, loan]
+    description: Daily counterparty exposure monitoring against Tier 1 capital limits.
+  - id: POL-MIF-01
+    title: EU retail client appropriateness procedure
+    owner: EU Compliance Lead
+    depends_on: ["Art25(3)", "Art25(4)", "ESMA-G11"]
+    transaction_types: [investment]
+    description: Appropriateness questionnaire, warnings and execution-only controls.
+  - id: POL-PSL-01
+    title: Priority sector classification and reporting
+    owner: Regulatory Reporting
+    depends_on: ["PSL-Para 23", "PSL-Para 25", "PSL-Para 28"]
+    transaction_types: [loan]
+    description: Priority sector tagging, on-lending caps and quarterly returns.

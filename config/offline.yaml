@@ -1,0 +1,29 @@
+# Runs anywhere with pip only: no model download and no LLM.
+# Used by CI, and by the runtime as the degraded-mode answer path.
+ingest:
+  use_official: false
+embedding:
+  backend: wordllama
+store:
+  path: .rca/offline/qdrant
+retrieval: &retrieval
+  mode: hybrid
+  reranker: feature
+  min_rerank_score: 0.23
+  glossary:
+    CDD: customer due diligence
+    EDD: enhanced due diligence
+    KYC: know your customer customer due diligence
+    STR: suspicious transaction report
+    PSL: priority sector lending
+    LEX: large exposures
+    NBFC: non-banking financial company on-lending
+    CET1: common equity tier 1
+    FATF: financial action task force jurisdictions
+    AML: anti money laundering
+llm:
+  generation_chain: [extractive]
+  classification_chain: [extractive]
+paths:
+  audit_log: .rca/offline/audit.jsonl
+  registry: .rca/offline/registry.json

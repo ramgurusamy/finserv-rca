@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "item": "GPU inference, baseline (6 L4, 1-year commitment)",
+      "usd_month": 3818,
+      "basis": "sourced"
+    },
+    {
+      "item": "GPU inference, burst (3 L4, 220 h on demand)",
+      "usd_month": 687,
+      "basis": "sourced"
+    },
+    {
+      "item": "GKE regional cluster fee",
+      "usd_month": 219,
+      "basis": "sourced"
+    },
+    {
+      "item": "Application and retrieval nodes",
+      "usd_month": 2956,
+      "basis": "estimate"
+    },
+    {
+      "item": "Qdrant nodes",
+      "usd_month": 1971,
+      "basis": "estimate"
+    },
+    {
+      "item": "AlloyDB, 4 vCPU-equivalent with HA",
+      "usd_month": 2836,
+      "basis": "derived"
+    },
+    {
+      "item": "Storage, logging, KMS, network, archive",
+      "usd_month": 1500,
+      "basis": "estimate"
+    }
+  ],
+  "total_usd_month": 13989,
+  "queries_month": 220000,
+  "cost_per_query_usd": 0.064,
+  "gpu_share": 0.322,
+  "api_comparison_usd_month": {
+    "Gemini 3.5 Flash-Lite, regional": 290,
+    "Gemini 3.5 Flash, regional": 1198,
+    "Gemini 3.1 Pro, regional": 1597
+  },
+  "self_hosted_gpu_usd_month": 4506
+}

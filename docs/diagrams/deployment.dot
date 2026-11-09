@@ -1,0 +1,10 @@
+digraph G { rankdir=LR; fontname="Calibri"; nodesep=0.22; ranksep=0.5; compound=true;
+ node [shape=box style="rounded,filled" fontname="Calibri" fontsize=9 fillcolor="#FFFFFF" color="#000000"]; edge [fontname="Calibri" fontsize=8 color="#000000"];
+ lb [label="Global external LB\nroute by user's entity" fillcolor="#F2F2F2"];
+ subgraph cluster_in { label="asia-south1 (India data)"; style="rounded,filled"; fillcolor="#F2F2F2"; color="#9A9A9A"; ia [label="Regional GKE, 3 zones\napp and retrieval pods"]; ig [label="GPU node pool, L4\n2 baseline, burst to 4"]; id [label="Qdrant, AlloyDB,\nGCS, KMS"]; ia->ig; ia->id; }
+ subgraph cluster_eu { label="europe-west3 (EU data)"; style="rounded,filled"; fillcolor="#F2F2F2"; color="#9A9A9A"; ea [label="Regional GKE, 3 zones\napp and retrieval pods"]; eg [label="GPU node pool, L4\n2 baseline, burst to 3"]; ed [label="Qdrant, AlloyDB,\nGCS, KMS"]; ea->eg; ea->ed; }
+ subgraph cluster_us { label="us-east4 (US data)"; style="rounded,filled"; fillcolor="#F2F2F2"; color="#9A9A9A"; ua [label="Regional GKE, 3 zones\napp and retrieval pods"]; ug [label="GPU node pool, L4\n2 baseline"]; ud [label="Qdrant, AlloyDB,\nGCS, KMS"]; ua->ug; ua->ud; }
+ lb->ia; lb->ea; lb->ua;
+ gl [label="Public regulation index\nreplicated by release pipeline" fillcolor="#D9D9D9"];
+ gl->id [style=dashed]; gl->ed [style=dashed]; gl->ud [style=dashed];
+}

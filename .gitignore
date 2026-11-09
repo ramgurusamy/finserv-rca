@@ -1,0 +1,9 @@
+.rca/
+.venv/
+__pycache__/
+*.egg-info/
+.coverage
+.pytest_cache/
+.ruff_cache/
+data/official/*.pdf
+data/official/*.html

@@ -1,0 +1,371 @@
+{
+  "assessment_id": "d5a1df51864741aba070daa36e3e5a61",
+  "status": "PRELIMINARY_NEEDS_INFO",
+  "risk_rating": "HIGH",
+  "summary": "Risk rating HIGH: Large exposure threshold stated without a measured value; Intra-group exposure treatment; Derivative exposure measurement.",
+  "transaction": {
+    "transaction_id": null,
+    "description": "Intra-group derivative trade exceeding large exposure threshold",
+    "amount": null,
+    "currency": null,
+    "instrument_type": "derivative",
+    "counterparty": null,
+    "counterparty_kyc_verified": null,
+    "jurisdiction": null,
+    "jurisdiction_risk_stated": null,
+    "cross_border": null,
+    "intra_group": true,
+    "exposure_pct_tier1": null,
+    "exceeds_large_exposure_stated": true,
+    "client_category": null,
+    "complex_product": null,
+    "appropriateness_done": null,
+    "lender_type": null,
+    "nbfc_involved": null,
+    "psl_relevant": null,
+    "borrower_amount_inr": null,
+    "psl_category": null,
+    "date": null
+  },
+  "applicable_regulations": [
+    "BCBS Basel Framework",
+    "RBI/2025-26/126"
+  ],
+  "findings": [
+    {
+      "rule_id": "LEX-003",
+      "title": "Large exposure threshold stated without a measured value",
+      "framework": "BASEL_III",
+      "severity": "HIGH",
+      "rationale": "The description says the threshold is exceeded, but limit breach cannot be confirmed without exposure as a percentage of Tier 1 capital.",
+      "required_actions": [
+        "Calculate total exposure to the counterparty group as a percentage of Tier 1 capital."
+      ],
+      "citations": [
+        {
+          "label": "S1",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX20.1",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        },
+        {
+          "label": "S2",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX10.8",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        },
+        {
+          "label": "S3",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX10.18",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        },
+        {
+          "label": "S4",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX20.4",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        }
+      ],
+      "evidence_found": true
+    },
+    {
+      "rule_id": "LEX-004",
+      "title": "Intra-group exposure treatment",
+      "framework": "RBI",
+      "severity": "MEDIUM",
+      "rationale": "Basel sets no separate intragroup treatment, so the national rule applies at each tier of the group.",
+      "required_actions": [
+        "Confirm which national intra-group limit applies to the booking entity.",
+        "Test the exposure against the eligible capital base."
+      ],
+      "citations": [
+        {
+          "label": "S1",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX-NOTE",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        },
+        {
+          "label": "S2",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX10.4",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        },
+        {
+          "label": "S3",
+          "doc_id": "rbi-bank-concentration-2025",
+          "para_ref": "CR-AMD-Para 116",
+          "version": "2026-04-01",
+          "reference": "RBI/2025-26/126, DOR.CRE.REC.333/07-03-001/2025-26, 4 December 2025",
+          "source_url": "https://taxguru.in/rbi/rbi-commercial-banks-concentration-risk-management-amendment-directions-2025.html",
+          "content_class": "digest"
+        },
+        {
+          "label": "S4",
+          "doc_id": "rbi-bank-concentration-2025",
+          "para_ref": "CR-AMD-Foreign-branches",
+          "version": "2026-04-01",
+          "reference": "RBI/2025-26/126, DOR.CRE.REC.333/07-03-001/2025-26, 4 December 2025",
+          "source_url": "https://taxguru.in/rbi/rbi-commercial-banks-concentration-risk-management-amendment-directions-2025.html",
+          "content_class": "digest"
+        }
+      ],
+      "evidence_found": true
+    },
+    {
+      "rule_id": "LEX-005",
+      "title": "Derivative exposure measurement",
+      "framework": "BASEL_III",
+      "severity": "LOW",
+      "rationale": "Derivative exposure value for large exposures uses SA-CCR.",
+      "required_actions": [
+        "Measure the derivative exposure value using SA-CCR."
+      ],
+      "citations": [
+        {
+          "label": "S1",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX30.4",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        },
+        {
+          "label": "S2",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX20.1",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        },
+        {
+          "label": "S3",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX10.8",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        },
+        {
+          "label": "S4",
+          "doc_id": "basel-lex",
+          "para_ref": "LEX30.31",
+          "version": "2023-01-01",
+          "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+          "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+          "content_class": "digest"
+        }
+      ],
+      "evidence_found": true
+    }
+  ],
+  "required_actions": [
+    "Calculate total exposure to the counterparty group as a percentage of Tier 1 capital.",
+    "Confirm which national intra-group limit applies to the booking entity.",
+    "Test the exposure against the eligible capital base.",
+    "Measure the derivative exposure value using SA-CCR."
+  ],
+  "citations": [
+    {
+      "label": "S1",
+      "doc_id": "basel-lex",
+      "para_ref": "LEX20.1",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+      "content_class": "digest"
+    },
+    {
+      "label": "S2",
+      "doc_id": "basel-lex",
+      "para_ref": "LEX10.8",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+      "content_class": "digest"
+    },
+    {
+      "label": "S3",
+      "doc_id": "basel-lex",
+      "para_ref": "LEX10.18",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+      "content_class": "digest"
+    },
+    {
+      "label": "S4",
+      "doc_id": "basel-lex",
+      "para_ref": "LEX20.4",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+      "content_class": "digest"
+    },
+    {
+      "label": "S1",
+      "doc_id": "basel-lex",
+      "para_ref": "LEX-NOTE",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+      "content_class": "digest"
+    },
+    {
+      "label": "S2",
+      "doc_id": "basel-lex",
+      "para_ref": "LEX10.4",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+      "content_class": "digest"
+    },
+    {
+      "label": "S3",
+      "doc_id": "rbi-bank-concentration-2025",
+      "para_ref": "CR-AMD-Para 116",
+      "version": "2026-04-01",
+      "reference": "RBI/2025-26/126, DOR.CRE.REC.333/07-03-001/2025-26, 4 December 2025",
+      "source_url": "https://taxguru.in/rbi/rbi-commercial-banks-concentration-risk-management-amendment-directions-2025.html",
+      "content_class": "digest"
+    },
+    {
+      "label": "S4",
+      "doc_id": "rbi-bank-concentration-2025",
+      "para_ref": "CR-AMD-Foreign-branches",
+      "version": "2026-04-01",
+      "reference": "RBI/2025-26/126, DOR.CRE.REC.333/07-03-001/2025-26, 4 December 2025",
+      "source_url": "https://taxguru.in/rbi/rbi-commercial-banks-concentration-risk-management-amendment-directions-2025.html",
+      "content_class": "digest"
+    },
+    {
+      "label": "S1",
+      "doc_id": "basel-lex",
+      "para_ref": "LEX30.4",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+      "content_class": "digest"
+    },
+    {
+      "label": "S4",
+      "doc_id": "basel-lex",
+      "para_ref": "LEX30.31",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+      "content_class": "digest"
+    }
+  ],
+  "clarifying_questions": [
+    "What is the transaction amount and currency?",
+    "What is the total exposure to this counterparty group as a percentage of Tier 1 capital?",
+    "Which legal entity and lender type is booking this, for example a commercial bank or an NBFC?"
+  ],
+  "cross_regulation_notes": [
+    "Obligations arise under BASEL_III, RBI. Each applies independently; meeting one does not discharge another.",
+    "Basel sets the 25% limit, while the intra-group treatment is set nationally. Test both, and apply the stricter result."
+  ],
+  "errors": [],
+  "human_review_required": true,
+  "disclaimer": "Decision support for a compliance officer. Not a legal determination.",
+  "trace": [
+    {
+      "node": "intake",
+      "t": 1793871530.545,
+      "pii_redactions": {},
+      "parsed": [
+        "exceeds_large_exposure_stated",
+        "instrument_type",
+        "intra_group"
+      ]
+    },
+    {
+      "node": "pull_transaction",
+      "t": 1793871530.545,
+      "skipped": true
+    },
+    {
+      "node": "check_sufficiency",
+      "t": 1793871530.546,
+      "open_questions": 1
+    },
+    {
+      "node": "screen",
+      "t": 1793871530.547,
+      "triggered": [
+        "LEX-003",
+        "LEX-004",
+        "LEX-005"
+      ]
+    },
+    {
+      "node": "retrieve",
+      "t": 1793871530.592,
+      "broadened": false,
+      "evidence": {
+        "LEX-003": [
+          "LEX20.1",
+          "LEX10.8",
+          "LEX10.18",
+          "LEX20.4"
+        ],
+        "LEX-004": [
+          "LEX-NOTE",
+          "LEX10.4",
+          "CR-AMD-Para 116",
+          "CR-AMD-Foreign-branches",
+          "CR-AMD-Para 4(3)"
+        ],
+        "LEX-005": [
+          "LEX30.4",
+          "LEX20.1",
+          "LEX10.8",
+          "LEX30.31"
+        ]
+      }
+    },
+    {
+      "node": "cross_reference",
+      "t": 1793871530.593,
+      "notes": 2
+    },
+    {
+      "node": "assess",
+      "t": 1793871530.594,
+      "rating": "HIGH"
+    },
+    {
+      "node": "validate",
+      "t": 1793871530.595,
+      "status": "PRELIMINARY_NEEDS_INFO",
+      "uncited": []
+    },
+    {
+      "node": "finalize",
+      "t": 1793871530.596
+    }
+  ]
+}

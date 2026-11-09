@@ -1,0 +1,689 @@
+{
+  "scores": {
+    "faithfulness": 1.0,
+    "answer_relevance": 0.631304617938331,
+    "context_precision": 0.8703703703703703,
+    "context_recall": 1.0,
+    "fact_coverage": 0.8055555555555556,
+    "refusal_accuracy": 1.0,
+    "false_refusal_rate": 0.0
+  },
+  "latency_ms": {
+    "p50": 7,
+    "p95": 11
+  },
+  "degraded_answers": 0,
+  "rows": [
+    {
+      "id": "Q01",
+      "category": "capital",
+      "question": "What are the capital adequacy requirements for Tier 1 under Basel III as amended in 2023?",
+      "answerable": true,
+      "refused": false,
+      "answer": "Tier 1 capital must be at least 6% of RWA. [S1] The eligible capital base is redefined as effective Tier 1 capital, with allowances for capital infused after the balance sheet date and, for Indian banks, profits accrued during the year. [S2] At consolidated level a bank compares its aggregate group exposures to third parties with the group's Tier 1 capital. [S3]",
+      "retrieved_refs": [
+        "RBC20.1",
+        "CR-AMD-Para 4(3)",
+        "LEX10.6",
+        "LEX10.4",
+        "LEX10.18",
+        "RBC30.1"
+      ],
+      "gold_refs": [
+        "RBC20.1"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 10,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.47210828463236487,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q02",
+      "category": "capital",
+      "question": "What is the size of the capital conservation buffer and what capital must it be held in?",
+      "answerable": true,
+      "refused": false,
+      "answer": "The capital conservation buffer equals 2.5% of risk-weighted assets, held entirely in CET1 capital, above the regulatory minimum. [S1] Distribution limits apply when capital falls inside the buffer range, while normal banking operations are not restricted. [S1] A 2.5% CET1 capital conservation buffer applies to all banks on top of these minimums, and a countercyclical buffer or higher loss absorbency requirements may also apply. [S2]",
+      "retrieved_refs": [
+        "RBC30.1",
+        "RBC20.1",
+        "CR-AMD-Para 4(3)",
+        "RBC30.6",
+        "RBC30.11",
+        "RBC20.2"
+      ],
+      "gold_refs": [
+        "RBC30.1"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 7,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.7426003456115723,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q03",
+      "category": "capital",
+      "question": "How does the output floor determine total risk-weighted assets?",
+      "answerable": true,
+      "refused": false,
+      "answer": "This second element is the output floor, and it is subject to the transitional arrangements in RBC90. [S1] Banks must meet three minimum risk-based capital ratios at all times, each measured against risk-weighted assets (RWA). [S3] Approaches used only for the output floor are not counted among a bank's nominated approaches. [S4]",
+      "retrieved_refs": [
+        "RBC20.4",
+        "RBC20.13",
+        "RBC20.1",
+        "RBC20.3",
+        "RBC30.1",
+        "Art25(3)"
+      ],
+      "gold_refs": [
+        "RBC20.4"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 8,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.6566469271977742,
+      "fact_coverage": 0.0
+    },
+    {
+      "id": "Q04",
+      "category": "capital",
+      "question": "How much of earnings must a bank retain if its CET1 ratio is 5.5%?",
+      "answerable": true,
+      "refused": false,
+      "answer": "A bank must recalculate its conservation ratio at each distribution date. [S1] With a CET1 ratio of 4.5% to 5.125%, 100% of earnings must be retained. [S1]",
+      "retrieved_refs": [
+        "RBC30.4",
+        "RBC20.1",
+        "RBC30.1",
+        "LEX10.6",
+        "LEX20.1",
+        "CR-AMD-Para 116"
+      ],
+      "gold_refs": [
+        "RBC30.4"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 8,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.675867634160178,
+      "fact_coverage": 0.0
+    },
+    {
+      "id": "Q05",
+      "category": "large_exposures",
+      "question": "What is the Basel limit on exposure to a single counterparty as a share of Tier 1 capital?",
+      "answerable": true,
+      "refused": false,
+      "answer": "The sum of a bank's exposure values to a single counterparty or a group of connected counterparties must not be higher than 25% of the bank's Tier 1 capital at all times. [S1] For an Upper Layer NBFC, a large exposure is the total exposure value to a counterparty or connected group that equals or exceeds 10% of the eligible capital base, which is Tier 1 capital. [S3] A large exposure is the sum of exposure values to a counterparty or a group of connected counterparties that equals or exceeds 10% of the bank's Tier 1 capital. [S4]",
+      "retrieved_refs": [
+        "LEX20.1",
+        "NBFC-CR-Para 33",
+        "NBFC-CR-Para 4(5)",
+        "LEX10.8",
+        "LEX10.18",
+        "RBC20.1"
+      ],
+      "gold_refs": [
+        "LEX20.1"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 11,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.6827727754910786,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q06",
+      "category": "large_exposures",
+      "question": "At what level does an exposure count as a large exposure under the Basel framework?",
+      "answerable": true,
+      "refused": false,
+      "answer": "The large exposures framework applies at every tier within a banking group, matching the scope of the risk-based capital requirements. [S1] A large exposure is the sum of exposure values to a counterparty or a group of connected counterparties that equals or exceeds 10% of the bank's Tier 1 capital. [S2] Exposures to group entities that are deducted from Owned Funds to arrive at Net Owned Funds are exempt from the large exposure framework. [S6]",
+      "retrieved_refs": [
+        "LEX10.4",
+        "LEX10.8",
+        "LEX20.1",
+        "NBFC-CR-Para 48",
+        "NBFC-CR-Para 4(5)",
+        "NBFC-CR-Para 29(3)"
+      ],
+      "gold_refs": [
+        "LEX10.8"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 10,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 0.5,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.4875771701335907,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q07",
+      "category": "large_exposures",
+      "question": "How is a derivative exposure value measured for large exposure purposes?",
+      "answerable": true,
+      "refused": false,
+      "answer": "For instruments that carry counterparty credit risk, other than securities financing transactions, the exposure value is the exposure at default under the standardised approach for counterparty credit risk (SA-CCR). [S1] Reporting covers all large exposures, other exposures of 10% or more measured without credit risk transfer offsets, exempted exposures of 10% or more, and the 10 largest exposures regardless of size. [S2] For an Upper Layer NBFC, a large exposure is the total exposure value to a counterparty or connected group that equals or exceeds 10% of the eligible capital base, which is Tier 1 capital. [S3]",
+      "retrieved_refs": [
+        "LEX30.4",
+        "NBFC-CR-Para 48",
+        "NBFC-CR-Para 4(5)",
+        "LEX10.8",
+        "LEX20.1",
+        "LEX20.4"
+      ],
+      "gold_refs": [
+        "LEX30.4"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 7,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.6236649056275685,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q08",
+      "category": "mifid",
+      "question": "What must an investment firm do when a client gives insufficient information for an appropriateness assessment under MiFID II?",
+      "answerable": true,
+      "refused": false,
+      "answer": "If the client gives no information or insufficient information, the firm must warn the client that it cannot determine appropriateness. [S1] If a client gives insufficient information or the product is deemed inappropriate, the firm should issue a warning. [S2] A firm may skip the appropriateness assessment only for certain listed non-complex instruments, where the service is provided at the client's initiative, the client is clearly warned that no assessment is made and the corresponding protection does not apply, and the firm meets its conflict of interest obligations under Article 23. [S3]",
+      "retrieved_refs": [
+        "Art25(3)",
+        "ESMA-P17",
+        "Art25(4)",
+        "ESMA-G11",
+        "ESMA-G1",
+        "Art25(2)"
+      ],
+      "gold_refs": [
+        "Art25(3)"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 7,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.6597831606864929,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q09",
+      "category": "mifid",
+      "question": "When can a firm skip the appropriateness assessment under the execution-only exemption?",
+      "answerable": true,
+      "refused": false,
+      "answer": "A firm may skip the appropriateness assessment only for certain listed non-complex instruments, where the service is provided at the client's initiative, the client is clearly warned that no assessment is made and the corresponding protection does not apply, and the firm meets its conflict of interest obligations under Article 23. [S1]",
+      "retrieved_refs": [
+        "Art25(4)",
+        "ESMA-G12",
+        "Art25(3)",
+        "ESMA-G11",
+        "ESMA-G1",
+        "NBFC-CR-Para 29(3)"
+      ],
+      "gold_refs": [
+        "Art25(4)"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 6,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.5887363155682881,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q10",
+      "category": "mifid",
+      "question": "What records should a firm keep about appropriateness warnings?",
+      "answerable": true,
+      "refused": false,
+      "answer": "If the client gives no information or insufficient information, the firm must warn the client that it cannot determine appropriateness. [S1] Firms should keep records of the information provided to clients, any warnings issued, and the corresponding client transactions. [S2] Records should cover the result of the assessment, any warning, whether the client asked to proceed, whether the firm accepted, how client information was collected, and the basis for not carrying out an assessment. [S2]",
+      "retrieved_refs": [
+        "Art25(3)",
+        "ESMA-G11",
+        "ESMA-G1",
+        "Art25(5)",
+        "ESMA-G9",
+        "Art25(4)"
+      ],
+      "gold_refs": [
+        "ESMA-G11"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 7,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 0.5,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.7119285265604656,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q11",
+      "category": "kyc",
+      "question": "Can a bank begin a transaction with a customer if customer due diligence has not been followed?",
+      "answerable": true,
+      "refused": false,
+      "answer": "Customer due diligence is required when opening an account-based relationship, for occasional transactions of Rs 50,000 or more whether single or connected, and for international money transfers. [S1] Banks must use FATF statements circulated by RBI and public information to identify countries that do not or insufficiently apply the FATF Recommendations, and must apply risk-proportionate enhanced due diligence to relationships and transactions with them. [S2] No transaction or account relationship may begin without following CDD. [S3]",
+      "retrieved_refs": [
+        "KYC-Para 5(2)(v)",
+        "KYC-Para 61",
+        "KYC-Para 17(3)",
+        "KYC-Para 17(2)",
+        "KYC-WIRE-Para 74(1)(i)",
+        "KYC-Para 19"
+      ],
+      "gold_refs": [
+        "KYC-Para 17(3)"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 7,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 0.3333333333333333,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.5873647232850392,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q12",
+      "category": "kyc",
+      "question": "What ownership percentage makes someone a beneficial owner of a company under RBI KYC rules?",
+      "answerable": true,
+      "refused": false,
+      "answer": "For a company, the beneficial owner is a natural person holding more than 10% of shares, capital or profits, or exercising control. [S1] If no natural person is identified, the senior managing official is treated as the beneficial owner. [S1]",
+      "retrieved_refs": [
+        "KYC-Para 5(1)(iv)",
+        "KYC-Para 61",
+        "KYC-Para 42",
+        "KYC-Para 5(2)(v)",
+        "KYC-Para 54",
+        "PSL-Para 7.1"
+      ],
+      "gold_refs": [
+        "KYC-Para 5(1)(iv)"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 7,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.4054575502872467,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q13",
+      "category": "kyc",
+      "question": "How long must banks retain transaction records under the RBI KYC directions?",
+      "answerable": true,
+      "refused": false,
+      "answer": "Transaction records must be kept for at least five years from the date of the transaction. [S1] Banks must use FATF statements circulated by RBI and public information to identify countries that do not or insufficiently apply the FATF Recommendations, and must apply risk-proportionate enhanced due diligence to relationships and transactions with them. [S2] Banks must examine the background and purpose of such transactions, keep written findings and documents, and provide them to RBI or other authorities on request. [S2]",
+      "retrieved_refs": [
+        "KYC-Para 50",
+        "KYC-Para 61",
+        "KYC-WIRE-Para 74(1)(i)",
+        "KYC-Para 55",
+        "KYC-Para 42",
+        "KYC-Para 20"
+      ],
+      "gold_refs": [
+        "KYC-Para 50"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 7,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.5578748285770416,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q14",
+      "category": "kyc",
+      "question": "Which countries are on the FATF call for action list as circulated by RBI in July 2026?",
+      "answerable": true,
+      "refused": false,
+      "answer": "Banks must use FATF statements circulated by RBI and public information to identify countries that do not or insufficiently apply the FATF Recommendations, and must apply risk-proportionate enhanced due diligence to relationships and transactions with them. [S1]",
+      "retrieved_refs": [
+        "KYC-Para 61",
+        "FATF-CFA",
+        "FATF-IM",
+        "KYC-Para 58",
+        "KYC-Para 17(9)",
+        "FATF-CHG"
+      ],
+      "gold_refs": [
+        "FATF-CFA"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 9,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 0.5,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.4706300033463372,
+      "fact_coverage": 0.0
+    },
+    {
+      "id": "Q15",
+      "category": "psl",
+      "question": "What is the total priority sector lending target for domestic commercial banks?",
+      "answerable": true,
+      "refused": false,
+      "answer": "Domestic banks and foreign banks with 20 or more branches have a total target of 40%. [S1] Foreign banks with fewer than 20 branches also have 40%, of which up to 32% may be export credit and at least 8% other priority sector lending. [S1] Banks may buy and sell Priority Sector Lending Certificates under RBI guidelines. [S2]",
+      "retrieved_refs": [
+        "PSL-Para 7.1",
+        "PSL-Para 21",
+        "PSL-Para 2",
+        "PSL-Para 25",
+        "PSL-Para 23",
+        "PSL-Para 7.2"
+      ],
+      "gold_refs": [
+        "PSL-Para 7.1"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 10,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.7881776392459869,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q16",
+      "category": "psl",
+      "question": "What is the cap on bank on-lending to NBFCs for priority sector classification?",
+      "answerable": true,
+      "refused": false,
+      "answer": "On-lending to NBFCs, including HFCs, and to NCDC is capped at 5% of the bank's previous-year total priority sector lending, averaged across four quarters. [S1] Bank credit to NBFCs other than MFIs for on-lending qualifies as priority sector lending for agriculture term lending up to Rs 10 lakh per borrower and for micro and small enterprises up to Rs 20 lakh per borrower. [S2] NBFCs have no priority sector targets of their own under these directions; they appear only as on-lending intermediaries. [S3]",
+      "retrieved_refs": [
+        "PSL-Para 25",
+        "PSL-Para 23",
+        "PSL-Para 2",
+        "PSL-Para 21",
+        "PSL-Para 7.1",
+        "PSL-Para 24"
+      ],
+      "gold_refs": [
+        "PSL-Para 25"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 6,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.7380999241556441,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q17",
+      "category": "psl",
+      "question": "When is quarterly priority sector data due?",
+      "answerable": true,
+      "refused": false,
+      "answer": "Priority sector compliance is monitored on a calendar-quarter basis. [S1] Quarterly data is due within 15 days after quarter end, and annual data within one month after the financial year end. [S1]",
+      "retrieved_refs": [
+        "PSL-Para 28",
+        "PSL-Para 21",
+        "PSL-Para 23",
+        "PSL-Para 29",
+        "PSL-Para 5",
+        "PSL-Para 25"
+      ],
+      "gold_refs": [
+        "PSL-Para 28"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 7,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.8269490301609039,
+      "fact_coverage": 1.0
+    },
+    {
+      "id": "Q18",
+      "category": "cross_regulation",
+      "question": "For an Upper Layer NBFC, how does the single counterparty limit compare with the Basel large exposure limit?",
+      "answerable": true,
+      "refused": false,
+      "answer": "An Upper Layer NBFC's total exposure to a single counterparty must stay at or below 20% of its eligible capital base at all times. [S1] For an Upper Layer NBFC, a large exposure is the total exposure value to a counterparty or connected group that equals or exceeds 10% of the eligible capital base, which is Tier 1 capital. [S2]",
+      "retrieved_refs": [
+        "NBFC-CR-Para 33",
+        "NBFC-CR-Para 4(5)",
+        "LEX20.1",
+        "NBFC-CR-Para 45",
+        "LEX10.1",
+        "LEX10.9"
+      ],
+      "gold_refs": [
+        "NBFC-CR-Para 33",
+        "LEX20.1"
+      ],
+      "provider": "extractive",
+      "model": "extractive-v1",
+      "degraded": false,
+      "latency_ms": 6,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "guardrail_notes": [],
+      "context_recall": 1.0,
+      "context_precision": 0.8333333333333333,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.687243378162384,
+      "fact_coverage": 0.5
+    },
+    {
+      "id": "Q19",
+      "category": "unanswerable",
+      "question": "What does the Dodd-Frank Volcker Rule say about proprietary trading?",
+      "answerable": false,
+      "refused": true,
+      "answer": "The indexed regulations do not contain enough evidence to answer this question.",
+      "retrieved_refs": [
+        "LEX30.15",
+        "KYC-Para 52",
+        "Art25(1)",
+        "CR-AMD-Foreign-branches",
+        "LEX-NOTE",
+        "RBC20.9"
+      ],
+      "gold_refs": [],
+      "provider": "",
+      "model": "",
+      "degraded": false,
+      "latency_ms": 7,
+      "tokens": {},
+      "guardrail_notes": [
+        "abstained: evidence strength below 0.23"
+      ]
+    },
+    {
+      "id": "Q20",
+      "category": "unanswerable",
+      "question": "What is the GST rate on insurance premiums in India?",
+      "answerable": false,
+      "refused": true,
+      "answer": "The indexed regulations do not contain enough evidence to answer this question.",
+      "retrieved_refs": [
+        "PSL-Para 29",
+        "KYC-Para 5(2)(v)",
+        "PSL-Para 21",
+        "PSL-Para 7.2",
+        "NBFC-CR-Para 35",
+        "NBFC-CR-Para 29(3)"
+      ],
+      "gold_refs": [],
+      "provider": "",
+      "model": "",
+      "degraded": false,
+      "latency_ms": 8,
+      "tokens": {},
+      "guardrail_notes": [
+        "abstained: evidence strength below 0.23"
+      ]
+    }
+  ],
+  "ablation": [
+    {
+      "variant": "Dense only",
+      "context_recall": 1.0,
+      "context_precision": 0.8564814814814814,
+      "hit_at_1": 0.7777777777777778
+    },
+    {
+      "variant": "BM25 only",
+      "context_recall": 1.0,
+      "context_precision": 0.9027777777777778,
+      "hit_at_1": 0.8333333333333334
+    },
+    {
+      "variant": "Hybrid (RRF)",
+      "context_recall": 1.0,
+      "context_precision": 0.9074074074074073,
+      "hit_at_1": 0.8333333333333334
+    },
+    {
+      "variant": "Hybrid + rerank (feature)",
+      "context_recall": 1.0,
+      "context_precision": 0.8703703703703703,
+      "hit_at_1": 0.7777777777777778
+    }
+  ]
+}

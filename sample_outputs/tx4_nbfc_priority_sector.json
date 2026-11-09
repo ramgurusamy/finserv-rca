@@ -1,0 +1,202 @@
+{
+  "assessment_id": "a1973d1aba224d5397eba498983adc4c",
+  "status": "PRELIMINARY_NEEDS_INFO",
+  "risk_rating": "MEDIUM",
+  "summary": "Risk rating MEDIUM: On-lending through an NBFC with priority sector treatment.",
+  "transaction": {
+    "transaction_id": null,
+    "description": "NBFC lending transaction requiring priority sector reporting",
+    "amount": null,
+    "currency": null,
+    "instrument_type": "loan",
+    "counterparty": null,
+    "counterparty_kyc_verified": null,
+    "jurisdiction": null,
+    "jurisdiction_risk_stated": null,
+    "cross_border": null,
+    "intra_group": null,
+    "exposure_pct_tier1": null,
+    "exceeds_large_exposure_stated": null,
+    "client_category": null,
+    "complex_product": null,
+    "appropriateness_done": null,
+    "lender_type": null,
+    "nbfc_involved": true,
+    "psl_relevant": true,
+    "borrower_amount_inr": null,
+    "psl_category": null,
+    "date": null
+  },
+  "applicable_regulations": [
+    "RBI/FIDD/2024-25/128"
+  ],
+  "findings": [
+    {
+      "rule_id": "PSL-001",
+      "title": "On-lending through an NBFC with priority sector treatment",
+      "framework": "RBI",
+      "severity": "MEDIUM",
+      "rationale": "NBFCs have no priority sector targets of their own, so the obligation sits with the lending bank through the on-lending route.",
+      "required_actions": [
+        "Confirm per-borrower eligibility and obtain disaggregated data with auditor certification.",
+        "Check the 5% on-lending cap.",
+        "Include the loan in quarterly priority sector reporting within 15 days after quarter end."
+      ],
+      "citations": [
+        {
+          "label": "S1",
+          "doc_id": "rbi-psl-2025",
+          "para_ref": "PSL-Para 2",
+          "version": "2026-09-11",
+          "reference": "RBI/FIDD/2024-25/128; FIDD.CO.PSD.BC.13/04.09.001/2024-25, 24 March 2025, updated as on 11 September 2026",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12799",
+          "content_class": "digest"
+        },
+        {
+          "label": "S2",
+          "doc_id": "rbi-psl-2025",
+          "para_ref": "PSL-Para 23",
+          "version": "2026-09-11",
+          "reference": "RBI/FIDD/2024-25/128; FIDD.CO.PSD.BC.13/04.09.001/2024-25, 24 March 2025, updated as on 11 September 2026",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12799",
+          "content_class": "digest"
+        },
+        {
+          "label": "S3",
+          "doc_id": "rbi-psl-2025",
+          "para_ref": "PSL-Para 25",
+          "version": "2026-09-11",
+          "reference": "RBI/FIDD/2024-25/128; FIDD.CO.PSD.BC.13/04.09.001/2024-25, 24 March 2025, updated as on 11 September 2026",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12799",
+          "content_class": "digest"
+        },
+        {
+          "label": "S4",
+          "doc_id": "rbi-psl-2025",
+          "para_ref": "PSL-Para 28",
+          "version": "2026-09-11",
+          "reference": "RBI/FIDD/2024-25/128; FIDD.CO.PSD.BC.13/04.09.001/2024-25, 24 March 2025, updated as on 11 September 2026",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12799",
+          "content_class": "digest"
+        }
+      ],
+      "evidence_found": true
+    }
+  ],
+  "required_actions": [
+    "Confirm per-borrower eligibility and obtain disaggregated data with auditor certification.",
+    "Check the 5% on-lending cap.",
+    "Include the loan in quarterly priority sector reporting within 15 days after quarter end."
+  ],
+  "citations": [
+    {
+      "label": "S1",
+      "doc_id": "rbi-psl-2025",
+      "para_ref": "PSL-Para 2",
+      "version": "2026-09-11",
+      "reference": "RBI/FIDD/2024-25/128; FIDD.CO.PSD.BC.13/04.09.001/2024-25, 24 March 2025, updated as on 11 September 2026",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12799",
+      "content_class": "digest"
+    },
+    {
+      "label": "S2",
+      "doc_id": "rbi-psl-2025",
+      "para_ref": "PSL-Para 23",
+      "version": "2026-09-11",
+      "reference": "RBI/FIDD/2024-25/128; FIDD.CO.PSD.BC.13/04.09.001/2024-25, 24 March 2025, updated as on 11 September 2026",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12799",
+      "content_class": "digest"
+    },
+    {
+      "label": "S3",
+      "doc_id": "rbi-psl-2025",
+      "para_ref": "PSL-Para 25",
+      "version": "2026-09-11",
+      "reference": "RBI/FIDD/2024-25/128; FIDD.CO.PSD.BC.13/04.09.001/2024-25, 24 March 2025, updated as on 11 September 2026",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12799",
+      "content_class": "digest"
+    },
+    {
+      "label": "S4",
+      "doc_id": "rbi-psl-2025",
+      "para_ref": "PSL-Para 28",
+      "version": "2026-09-11",
+      "reference": "RBI/FIDD/2024-25/128; FIDD.CO.PSD.BC.13/04.09.001/2024-25, 24 March 2025, updated as on 11 September 2026",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12799",
+      "content_class": "digest"
+    }
+  ],
+  "clarifying_questions": [
+    "What is the transaction amount and currency?",
+    "Which legal entity and lender type is booking this, for example a commercial bank or an NBFC?",
+    "Which priority sector category applies, for example agriculture or MSE?",
+    "What is the per-borrower amount in INR?"
+  ],
+  "cross_regulation_notes": [],
+  "errors": [],
+  "human_review_required": true,
+  "disclaimer": "Decision support for a compliance officer. Not a legal determination.",
+  "trace": [
+    {
+      "node": "intake",
+      "t": 1793871530.638,
+      "pii_redactions": {},
+      "parsed": [
+        "instrument_type",
+        "nbfc_involved",
+        "psl_relevant"
+      ]
+    },
+    {
+      "node": "pull_transaction",
+      "t": 1793871530.638,
+      "skipped": true
+    },
+    {
+      "node": "check_sufficiency",
+      "t": 1793871530.639,
+      "open_questions": 1
+    },
+    {
+      "node": "screen",
+      "t": 1793871530.64,
+      "triggered": [
+        "PSL-001"
+      ]
+    },
+    {
+      "node": "retrieve",
+      "t": 1793871530.654,
+      "broadened": false,
+      "evidence": {
+        "PSL-001": [
+          "PSL-Para 2",
+          "PSL-Para 23",
+          "PSL-Para 25",
+          "PSL-Para 28",
+          "PSL-Para 24"
+        ]
+      }
+    },
+    {
+      "node": "cross_reference",
+      "t": 1793871530.656,
+      "notes": 0
+    },
+    {
+      "node": "assess",
+      "t": 1793871530.657,
+      "rating": "MEDIUM"
+    },
+    {
+      "node": "validate",
+      "t": 1793871530.659,
+      "status": "PRELIMINARY_NEEDS_INFO",
+      "uncited": []
+    },
+    {
+      "node": "finalize",
+      "t": 1793871530.66
+    }
+  ]
+}

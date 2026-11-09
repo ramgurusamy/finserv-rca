@@ -1,0 +1,5 @@
+digraph G { rankdir=TB; fontname="Calibri"; nodesep=0.3; ranksep=0.3;
+ node [shape=box style="rounded,filled" fontname="Calibri" fontsize=10 fillcolor="#FFFFFF" color="#000000"]; edge [fontname="Calibri" fontsize=8 color="#000000"];
+ intake [label="intake\nredact PII, parse fields"]; pull [label="pull_transaction\nread-only lookup"]; suff [label="check_sufficiency\nlist open questions"]; screen [label="screen\ndeterministic rules" fillcolor="#D9D9D9"]; retr [label="retrieve\nanchors + RAG"]; broad [label="broaden\ndrop framework filter"]; xref [label="cross_reference\nmulti-framework notes"]; assess [label="assess\nrating from rules, LLM drafts narrative"]; val [label="validate\ncitations, status" fillcolor="#D9D9D9"]; fin [label="finalize\nstructured assessment, audit record"];
+ intake->pull->suff->screen; screen->fin [label="no rule, too few facts"]; screen->retr [label="rules fired"]; retr->broad [label="evidence gap, once"]; broad->retr; retr->xref->assess->val->fin;
+}

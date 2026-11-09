@@ -1,0 +1,43 @@
+# Laptop profile: CPU-only open models through Ollama, official PDFs where available.
+# Ollama and vLLM share the OpenAI-compatible API, so this path mirrors production.
+ingest:
+  use_official: true
+embedding:
+  backend: fastembed
+  model: BAAI/bge-small-en-v1.5
+store:
+  path: .rca/laptop/qdrant
+retrieval:
+  mode: hybrid
+  reranker: cross_encoder
+  cross_encoder_model: cross-encoder/ms-marco-MiniLM-L-6-v2
+  min_rerank_score: 0.05
+  glossary:
+    CDD: customer due diligence
+    EDD: enhanced due diligence
+    KYC: know your customer customer due diligence
+    STR: suspicious transaction report
+    PSL: priority sector lending
+    LEX: large exposures
+    NBFC: non-banking financial company on-lending
+    CET1: common equity tier 1
+    FATF: financial action task force jurisdictions
+    AML: anti money laundering
+llm:
+  generation_chain: [ollama-local, extractive]
+  classification_chain: [extractive]
+  providers:
+    - name: ollama-local
+      kind: openai_compatible
+      base_url: http://localhost:11434/v1
+      model: granite3.3:2b          # Apache-2.0. Override with RCA_OLLAMA_MODEL.
+      hosting: self_hosted
+      region: LOCAL
+      allowed_residency: [IN, EU, GLOBAL]
+      timeout_s: 300
+      max_tokens: 300
+    - name: extractive
+      kind: extractive
+paths:
+  audit_log: .rca/laptop/audit.jsonl
+  registry: .rca/laptop/registry.json

@@ -1,0 +1,71 @@
+{
+  "assessment_id": "f66e72acee6f46f1bb4dee2f6cc542e5",
+  "status": "INSUFFICIENT_INFO",
+  "risk_rating": "UNDETERMINED",
+  "summary": "Not enough information to screen this transaction.",
+  "transaction": {
+    "transaction_id": null,
+    "description": "Please check this payment",
+    "amount": null,
+    "currency": null,
+    "instrument_type": "payment",
+    "counterparty": null,
+    "counterparty_kyc_verified": null,
+    "jurisdiction": null,
+    "jurisdiction_risk_stated": null,
+    "cross_border": null,
+    "intra_group": null,
+    "exposure_pct_tier1": null,
+    "exceeds_large_exposure_stated": null,
+    "client_category": null,
+    "complex_product": null,
+    "appropriateness_done": null,
+    "lender_type": null,
+    "nbfc_involved": null,
+    "psl_relevant": null,
+    "borrower_amount_inr": null,
+    "psl_category": null,
+    "date": null
+  },
+  "applicable_regulations": [],
+  "findings": [],
+  "required_actions": [],
+  "citations": [],
+  "clarifying_questions": [
+    "What is the transaction amount and currency?",
+    "Has the counterparty completed KYC verification?"
+  ],
+  "cross_regulation_notes": [],
+  "errors": [],
+  "human_review_required": true,
+  "disclaimer": "Decision support for a compliance officer. Not a legal determination.",
+  "trace": [
+    {
+      "node": "intake",
+      "t": 1793871530.671,
+      "pii_redactions": {},
+      "parsed": [
+        "instrument_type"
+      ]
+    },
+    {
+      "node": "pull_transaction",
+      "t": 1793871530.672,
+      "skipped": true
+    },
+    {
+      "node": "check_sufficiency",
+      "t": 1793871530.673,
+      "open_questions": 2
+    },
+    {
+      "node": "screen",
+      "t": 1793871530.674,
+      "triggered": []
+    },
+    {
+      "node": "finalize",
+      "t": 1793871530.676
+    }
+  ]
+}

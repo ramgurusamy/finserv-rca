@@ -1,0 +1,54 @@
+{
+  "question": "What are the capital adequacy requirements for Tier 1 under Basel III as amended in 2023?",
+  "answer": "Tier 1 capital must be at least 6% of RWA. [S1] The eligible capital base is redefined as effective Tier 1 capital, with allowances for capital infused after the balance sheet date and, for Indian banks, profits accrued during the year. [S2] At consolidated level a bank compares its aggregate group exposures to third parties with the group's Tier 1 capital. [S3]",
+  "citations": [
+    {
+      "label": "S1",
+      "doc_id": "basel-rbc",
+      "para_ref": "RBC20.1",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, RBC20 (published 2020-11-26, effective 2023-01-01); RBC30 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/standard/rbc?allChapters=true",
+      "content_class": "digest"
+    },
+    {
+      "label": "S2",
+      "doc_id": "rbi-bank-concentration-2025",
+      "para_ref": "CR-AMD-Para 4(3)",
+      "version": "2026-04-01",
+      "reference": "RBI/2025-26/126, DOR.CRE.REC.333/07-03-001/2025-26, 4 December 2025",
+      "source_url": "https://taxguru.in/rbi/rbi-commercial-banks-concentration-risk-management-amendment-directions-2025.html",
+      "content_class": "digest"
+    },
+    {
+      "label": "S3",
+      "doc_id": "basel-lex",
+      "para_ref": "LEX10.6",
+      "version": "2023-01-01",
+      "reference": "BCBS Basel Framework, LEX10 and LEX30 (versions effective 2023-01-01); LEX20 (version effective 2019-12-15)",
+      "source_url": "https://www.bis.org/committees/bcbs/basel-framework/LEX/standard.pdf",
+      "content_class": "digest"
+    }
+  ],
+  "grounded": true,
+  "refused": false,
+  "degraded": false,
+  "provider": "extractive",
+  "model": "extractive-v1",
+  "prompt_version": "qa-v1",
+  "as_of": null,
+  "guardrails": {
+    "passed": true,
+    "invalid_citations": [],
+    "uncited_sentences": [],
+    "unsupported_numbers": [],
+    "pii_redactions": {},
+    "notes": []
+  },
+  "latency_ms": 17,
+  "tokens": {
+    "input": 0,
+    "output": 0
+  },
+  "audit_id": "8af545ec3bd74420b1efa371cf281419"
+}
